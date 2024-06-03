@@ -1,0 +1,249 @@
+{
+  "valuemappings": {
+    "onoff": {
+      "0": "off",
+      "1": "on"
+    },
+    "offmoon": {
+      "0": "off",
+      "1": "moon"
+    },
+    "openclose": {
+      "0": "open",
+      "1": "close"
+    },
+    "opencloseinverted": {
+      "0": "close",
+      "1": "open"
+    }
+  },
+  "topics": [
+    {
+      "topic": "alice/myroom/ceiling",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/yeelight.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/ceiling/brightness",
+      "valuetype": "pass",
+      "command": "/var/www/pult/yeelight.sh brightness 10.0.0.92 @!@"
+    },
+    {
+      "topic": "alice/myroom/curtain",
+      "valuetype": "opencloseinverted",
+      "command": "/root/smart-home-yandex/dotnetmqtt/shtora_@!@.sh"
+    },
+    {
+      "topic": "alice/myroom/tv",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "O511535",
+        "1": "O511539"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/tv/input",
+      "valuetype": "map",
+      "valueMapping": {
+        "\"one\"": "LGTV_hdmi1",
+        "\"two\"": "LGTV_hdmi2",
+        "\"three\"": "LGTV_hdmi3"
+      },
+      "command": "/var/www/pult/broadlink.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/tv/backlight",
+      "valuetype": "map",
+      "valueMapping": {
+        "true": "LGTV_power",
+        "false": "LGTV_power"
+      },
+      "command": "/var/www/pult/broadlink.sh @!@"
+    },
+    {
+      "topic": "alice/playroom/station",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/broadlink.sh newpult_5@!@"
+    },
+    {
+      "topic": "alice/myroom/vent",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "N1039505",
+        "1": "N1039513"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/humidifier",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/broadlink.sh hum_@!@"
+    },
+    {
+      "topic": "alice/myroom/self",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "N1039506",
+        "1": "N1039514"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/ups",
+      "valuetype": "onoff",
+      "command": "/root/smart-home-yandex/dotnetmqtt/ups_@!@.sh"
+    },
+    {
+      "topic": "alice/myroom/roleta",
+      "valuetype": "opencloseinverted",
+      "command": "/var/www/pult/broadlink.sh roleta_@!@"
+    },
+    {
+      "topic": "alice/myroom/roleta2",
+      "valuetype": "opencloseinverted",
+      "command": "/var/www/pult/broadlink.sh roleta2_@!@"
+    },
+    {
+      "topic": "alice/myroom/aircond/on",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/broadlink.sh aircond_off"
+    },
+    {
+      "topic": "alice/myroom/aircond/thermostat",
+      "valuetype": "map",
+      "valueMapping": {
+        "\"heat\"": "aircond_heat_24",
+        "\"cool\"": "aircond_cold_25"
+      },
+      "command": "/var/www/pult/broadlink.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/monitor",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "O511211",
+        "1": "O511215"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/bedheat",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "O511589",
+        "1": "O511593"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/eveninglight",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "O511733",
+        "1": "O511737"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },
+    {
+      "topic": "alice/myroom/nightlight",
+      "valuetype": "offmoon",
+      "command": "/var/www/pult/yeelight.sh @!@"
+    },
+    {
+      "topic": "alice/hall/ceiling",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/yeelight.sh @!@ 10.0.0.97"
+    },
+    {
+      "topic": "alice/kitchen/ceiling",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/yeelight.sh @!@ 10.0.0.96"
+    },
+    {
+      "topic": "alice/kitchen/ceiling/brightness",
+      "valuetype": "pass",
+      "command": "/var/www/pult/yeelight.sh brightness 10.0.0.96 @!@"
+    },
+    {
+      "topic": "alice/kidsroom/ceiling",
+      "valuetype": "offmoon",
+      "command": "/var/www/pult/yeelight.sh @!@ 10.0.0.95"
+    },
+    {
+      "topic": "alice/playroom/ceiling",
+      "valuetype": "onoff",
+      "command": "/var/www/pult/yeelight.sh @!@ 10.0.0.94"
+    },
+    {
+      "topic": "alice/playroom/ceiling/brightness",
+      "valuetype": "pass",
+      "command": "/var/www/pult/yeelight.sh brightness 10.0.0.94 @!@"
+    },
+    {
+      "topic": "alice/playroom/tv",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "LGTV_power",
+        "1": "LGTV_power"
+      },
+      "command": "/var/www/pult/broadlink/broadlink_RMmini @!@"
+    },
+    {
+      "topic": "alice/playroom/tv/input",
+      "valuetype": "map",
+      "valueMapping": {
+        "\"one\"": "LGTV_hdmi1",
+        "\"two\"": "LGTV_hdmi2",
+        "\"three\"": "LGTV_hdmi3"
+      },
+      "command": "/var/www/pult/broadlink/broadlink_RMmini @!@"
+    },
+    {
+      "topic": "alice/playroom/tv/channel",
+      "valuetype": "map",
+      "valueMapping": {
+        "-1": "DVBT2_chdown",
+        "1": "DVBT2_chup"
+      },
+      "command": "/var/www/pult/broadlink/broadlink_RMmini @!@"
+    },
+    {
+      "topic": "alice/myroom/vacuum_cleaner",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "stop",
+        "1": "start"
+      },
+      "command": "/usr/bin/wget -qO- --method PUT http://10.0.0.90/api/@!@_cleaning"
+    },
+    {
+      "topic": "alice/bath/water",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "O505136",
+        "1": "O505140"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },    
+    {
+      "topic": "alice/myroom/plugs_on_table",
+      "valuetype": "map",
+      "valueMapping": {
+        "0": "N1039509",
+        "1": "N1039517"
+      },
+      "command": "/root/smart-home-yandex/dotnetmqtt/433_pult.sh @!@"
+    },    
+    {
+      "topic": "alice/myroom/light_on_table",
+      "valuetype": "onoff",
+      "command": "/root/smart-home-yandex/dotnetmqtt/zigbeestate.sh ikeatoptable @!@"
+    },    
+    {
+      "topic": "alice/myroom/light_on_bed",
+      "valuetype": "onoff",
+      "command": "/root/smart-home-yandex/dotnetmqtt/zigbeestate.sh ikeacolor @!@"
+    },    
+  ]
+}
